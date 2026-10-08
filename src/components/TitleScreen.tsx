@@ -68,11 +68,21 @@ export function TitleScreen({
   scores,
   onStart,
   onScores,
+<<<<<<< HEAD
+=======
+  onProfile,
+  profileName,
+>>>>>>> b96a6a9 (update commit)
   best,
 }: {
   scores: ScoreEntry[];
   onStart: () => void;
   onScores: () => void;
+<<<<<<< HEAD
+=======
+  onProfile: () => void;
+  profileName: string | null;
+>>>>>>> b96a6a9 (update commit)
   best: number;
 }) {
   return (
@@ -118,6 +128,12 @@ export function TitleScreen({
           <NeonButton color="#a78bfa" onClick={onScores}>
             🏆 High Scores
           </NeonButton>
+<<<<<<< HEAD
+=======
+          <NeonButton color="#86efac" onClick={onProfile}>
+            {profileName ? `Pilot · ${profileName}` : 'Pilot Profile'}
+          </NeonButton>
+>>>>>>> b96a6a9 (update commit)
         </div>
 
         <div className="mt-9 grid w-full grid-cols-2 gap-3 text-left sm:grid-cols-4">

@@ -17,11 +17,19 @@ import { NeonButton } from './ui';
 
 export function GameScreen({
   charId,
+<<<<<<< HEAD
   onQuit,
   onChangeFighter,
 }: {
   charId: string;
   onQuit: () => void;
+=======
+  onHome,
+  onChangeFighter,
+}: {
+  charId: string;
+  onHome: () => void;
+>>>>>>> b96a6a9 (update commit)
   onChangeFighter: () => void;
 }) {
   const holderRef = useRef<HTMLDivElement | null>(null);
@@ -169,7 +177,23 @@ export function GameScreen({
 
   return (
     <div ref={holderRef} className="relative h-full w-full overflow-hidden bg-[#05030c]">
+<<<<<<< HEAD
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+=======
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 h-full w-full"
+        onClick={() => {
+          const current = gameRef.current;
+          if (!current || result || paused) return;
+          current.touch.attack = true;
+          sfx.resume();
+          window.setTimeout(() => {
+            current.touch.attack = false;
+          }, 100);
+        }}
+      />
+>>>>>>> b96a6a9 (update commit)
 
       {/* top-right system buttons */}
       <div className="pointer-events-none absolute right-2 top-2 z-30 flex gap-2">
@@ -219,8 +243,13 @@ export function GameScreen({
               <NeonButton color="#a78bfa" onClick={restart}>
                 ↻ Restart Match
               </NeonButton>
+<<<<<<< HEAD
               <NeonButton color="#fb7185" onClick={onQuit}>
                 ✕ Quit to Title
+=======
+              <NeonButton color="#fb7185" onClick={onHome}>
+                ⌂ Back to Home
+>>>>>>> b96a6a9 (update commit)
               </NeonButton>
             </div>
             <div className="mt-5 grid grid-cols-2 gap-2 text-left">
@@ -252,7 +281,11 @@ export function GameScreen({
                 className="neon-text font-display text-4xl font-black tracking-widest"
                 style={{ color: result.rounds >= 5 ? '#fde047' : '#fda4af' }}
               >
+<<<<<<< HEAD
                 {result.rounds >= 7 ? 'LEGEND' : result.rounds >= 4 ? 'DEFEATED' : 'KO\'d'}
+=======
+                {result.rounds >= 9 ? 'CHAMPION' : result.rounds >= 4 ? 'DEFEATED' : 'KO\'d'}
+>>>>>>> b96a6a9 (update commit)
               </h3>
               <p className="mt-1 text-sm text-white/60">
                 You cleared <span className="font-bold text-white">{result.rounds}</span> rival
@@ -307,10 +340,17 @@ export function GameScreen({
                 ↻ Rematch <span className="opacity-60">(R)</span>
               </NeonButton>
               <NeonButton color="#a78bfa" onClick={onChangeFighter}>
+<<<<<<< HEAD
                 ⚔ New Fighter
               </NeonButton>
               <NeonButton color="#64748b" onClick={onQuit}>
                 ⌂ Title
+=======
+                ⚔ New Champion
+              </NeonButton>
+              <NeonButton color="#64748b" onClick={onHome}>
+                ⌂ Back to Home
+>>>>>>> b96a6a9 (update commit)
               </NeonButton>
             </div>
           </div>

@@ -10,18 +10,51 @@ html,
 body,
 #root {
   height: 100%;
+<<<<<<< HEAD
+=======
+  min-height: 100%;
+>>>>>>> b96a6a9 (update commit)
   margin: 0;
   background: #05030c;
   overscroll-behavior: none;
 }
 
+<<<<<<< HEAD
 body {
+=======
+html {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+>>>>>>> b96a6a9 (update commit)
   font-family: var(--font-body);
   color: #e6e2ff;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
 
+<<<<<<< HEAD
+=======
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 3px;
+}
+
+>>>>>>> b96a6a9 (update commit)
 canvas {
   display: block;
   touch-action: none;
@@ -180,6 +213,101 @@ canvas {
   animation: shimmer 4s linear infinite;
 }
 
+<<<<<<< HEAD
+=======
+.auth-screen {
+  background:
+    radial-gradient(ellipse at 15% 48%, rgba(34, 211, 238, 0.13), transparent 38%),
+    radial-gradient(ellipse at 85% 12%, rgba(232, 121, 249, 0.12), transparent 42%),
+    radial-gradient(ellipse at 50% 110%, rgba(109, 40, 217, 0.24), transparent 54%),
+    linear-gradient(145deg, #070510 0%, #0c071a 55%, #080510 100%);
+}
+
+.auth-screen::before,
+.auth-screen::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.auth-screen::before {
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(167, 139, 250, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.1) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 0%, transparent 76%);
+}
+
+.auth-screen::after {
+  background: linear-gradient(90deg, transparent 49.9%, rgba(34, 211, 238, 0.15) 50%, transparent 50.1%);
+  opacity: 0.28;
+}
+
+.auth-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(167, 139, 250, 0.32);
+  background:
+    linear-gradient(155deg, rgba(32, 21, 58, 0.92), rgba(8, 6, 18, 0.96) 76%),
+    #0d0820;
+  box-shadow:
+    0 32px 100px -44px rgba(34, 211, 238, 0.3),
+    0 24px 80px -48px rgba(192, 132, 252, 0.7),
+    inset 0 1px rgba(255, 255, 255, 0.08);
+  animation: slideUp 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.05) both;
+}
+
+.auth-emblem {
+  border: 1px solid rgba(103, 232, 249, 0.55);
+  background: linear-gradient(145deg, rgba(34, 211, 238, 0.28), rgba(167, 139, 250, 0.1));
+  box-shadow: 0 0 38px -8px rgba(34, 211, 238, 0.75), inset 0 0 20px rgba(34, 211, 238, 0.12);
+  transform: rotate(-8deg);
+}
+
+.auth-submit {
+  background: linear-gradient(110deg, rgba(34, 211, 238, 0.2), rgba(139, 92, 246, 0.24), rgba(34, 211, 238, 0.16));
+  box-shadow: 0 0 34px -14px rgba(34, 211, 238, 0.82), inset 0 1px rgba(255, 255, 255, 0.12);
+  transition: box-shadow 160ms ease, transform 160ms ease, border-color 160ms ease;
+}
+
+.auth-submit:hover {
+  border-color: rgba(103, 232, 249, 0.85);
+  box-shadow: 0 0 38px -10px rgba(34, 211, 238, 0.9), inset 0 1px rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.auth-orbit {
+  position: absolute;
+  width: min(76vw, 600px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(167, 139, 250, 0.11);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.auth-orbit-one {
+  top: 50%;
+  left: -29%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 46px rgba(167, 139, 250, 0.025), 0 0 0 92px rgba(34, 211, 238, 0.018);
+}
+
+.auth-orbit-two {
+  right: -34%;
+  bottom: -72%;
+  border-color: rgba(34, 211, 238, 0.1);
+}
+
+.auth-glyph {
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  background: rgba(18, 12, 36, 0.66);
+  box-shadow: 0 0 20px -12px rgba(34, 211, 238, 0.75);
+  animation: floaty 3.4s ease-in-out infinite;
+}
+
+>>>>>>> b96a6a9 (update commit)
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -191,3 +319,16 @@ canvas {
   background: rgba(167, 139, 250, 0.5);
   border-radius: 8px;
 }
+<<<<<<< HEAD
+=======
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+>>>>>>> b96a6a9 (update commit)
